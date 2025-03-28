@@ -71,3 +71,5 @@ eval "$(starship init zsh)"
 source "$HOME/.zsh_aliases"
 
 alias reload='source ~/.zshrc'
+
+source /Users/philipp/.config/broot/launcher/bash/br
