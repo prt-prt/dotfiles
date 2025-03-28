@@ -1,0 +1,56 @@
+
+# _ __ ___  _   _    __ _| (_) __ _ ___  ___  ___
+#| '_ ` _ \| | | |  / _` | | |/ _` / __|/ _ \/ __|
+#| | | | | | |_| | | (_| | | | (_| \__ \  __/\__ \
+#|_| |_| |_|\__, |  \__,_|_|_|\__,_|___/\___||___/
+#           |___/
+
+export VAULT='/Users/philipp/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault'
+export PROJECTS='/Users/philipp/Documents/1 Projects'
+export PRT='/Users/philipp/Library/Mobile Documents/com~apple~CloudDocs/2 Areas/prt-site'
+export MA='/Users/philipp/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault/1 Projects/Ma'
+
+# basic fs commands
+alias ll='ls -alF'
+alias la='ls -a'
+alias l='ls -CF'
+alias .='cd ~/'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias c='clear'
+
+# git commands
+alias g='lazygit'
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gp='git push'
+
+# neovim shortcuts
+alias n='nvim .'
+alias nn='nvim ~/.config/nvim/init.lua'
+alias nstar='nvim ~/.config/starship.toml'
+alias nzsh='nvim ~/.zshrc'
+alias nz='nzsh'
+alias nza='nvim ~/.zsh_aliases'
+alias nma='nvim $MA/template.tex'
+alias na='nvim ~/.aerospace.toml'
+alias no='nvim $VAULT'
+alias reload='source ~/.zshrc'
+
+# cursor shortcuts
+alias cprt='cursor $PRT'
+alias co='cursor $VAULT'
+alias clp='cursor $PROJECTS/LifePixels'
+
+# Path aliases
+alias v='cd $VAULT'
+alias o='cd $VAULT'
+alias p='cd $PROJECTS'
+alias prt='cd $PRT'
+alias ma='cd $MA'
+
+# Pandoc aliases
+alias ema='pandoc $MA/Masterarbeit.md --template $MA/template.tex -o masterarbeit.pdf --pdf-engine lualatex --verbose --listings --citeproc --bibliography MA.bib --csl $MA/apa.csl'
+
+alias ematex='pandoc $MA/Masterarbeit.md --template $MA/template.tex -o $MA/masterarbeit.tex --verbose --listings --citeproc --bibliography MA.bib --csl $MA/apa.csl'
