@@ -11,13 +11,14 @@ export PRT='/Users/philipp/Library/Mobile Documents/com~apple~CloudDocs/2 Areas/
 export MA='/Users/philipp/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault/1 Projects/Ma'
 
 # basic fs commands
+alias c='clear'
 alias ll='ls -alF'
 alias la='ls -a'
 alias l='ls -CF'
 alias .='cd ~/'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias c='clear'
+alias dot='cd ~/dotfiles/'
 
 # git commands
 alias g='lazygit'
