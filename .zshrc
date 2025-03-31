@@ -15,18 +15,12 @@ compinit -C
 
 zstyle ':completion:*' menu select
 
-export WIN_DIR="/mnt/c/Users/phili"
 
 # -------------------------------
 #  Common Environment Variables
 # -------------------------------
 
 # Keep only system-agnostic variables here
-# export NVM_DIR="$HOME/.nvm"
-# export VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault"
-# export PROJECTS="$HOME/Documents/1 Projects"
-# export PRT="$HOME/Library/Mobile Documents/com~apple~CloudDocs/2 Areas/prt-site"
-# export MA="$VAULT/1 Projects/Ma"
 
 # -------------------------------
 #  Zinit Plugin Manager
@@ -42,6 +36,7 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+
 # -------------------------------
 #  Lazy-loaded Plugins
 # -------------------------------
@@ -55,12 +50,16 @@ zinit light Aloxaf/fzf-tab
 #  OS Detection & Config
 # -------------------------------
 
+
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    # macOS specific configuration
+   
     source "$HOME/.zsh_macos"
+
 elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    # Linux/WSL specific configuration
+
+    export WIN_DIR="/mnt/c/Users/phili"
     source "$WIN_DIR/.zsh_linux"
+
 fi
 
 
