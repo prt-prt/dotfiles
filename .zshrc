@@ -15,7 +15,7 @@ compinit -C
 
 zstyle ':completion:*' menu select
 
-export WIN_DIR="$HOME/mnt/c/Users/phili/dotfiles"
+export WIN_DIR="/mnt/c/Users/phili"
 
 # -------------------------------
 #  Common Environment Variables
