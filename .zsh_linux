@@ -1,0 +1,2 @@
+ # Linux/WSL specific paths and configurations
+echo "hello linux"

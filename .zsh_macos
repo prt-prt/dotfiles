@@ -1,0 +1,30 @@
+# macOS specific paths and configurations
+export VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/vault"
+export PROJECTS="$HOME/Documents/1 Projects"
+export PRT="$HOME/Library/Mobile Documents/com~apple~CloudDocs/2 Areas/prt-site"
+export MA="$VAULT/1 Projects/Ma"
+
+
+# macOS specific initializations
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+#macOS specific aliases
+source "$HOME/.zsh_aliases"
+
+# Docker Desktop for macOS
+if [ -f "$HOME/.docker/init-zsh.sh" ]; then
+    source "$HOME/.docker/init-zsh.sh"
+fi 
+
+
+zinit ice wait"1" lucid \
+  atinit'export NVM_DIR="$HOME/.nvm"' \
+  atload'source /opt/homebrew/opt/nvm/nvm.sh'
+zinit snippet https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/nvm.sh
+
+
+# Lazy-load Docker Desktop init
+zinit ice wait"1" lucid atload"source /Users/philipp/.docker/init-zsh.sh || true"
+zinit snippet /Users/philipp/.docker/init-zsh.sh
+
+source /Users/philipp/.config/broot/launcher/bash/br
