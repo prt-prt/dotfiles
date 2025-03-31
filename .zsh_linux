@@ -1,2 +1,24 @@
  # Linux/WSL specific paths and configurations
-echo "hello linux"
+echo "setting up linux specific aliases"
+
+# basic fs commands
+alias c='clear'
+alias ll='ls -alF'
+alias la='ls -a'
+alias l='ls -CF'
+alias .='cd ~/'
+alias ..='cd ..'
+alias ...='cd ../..'
+
+# git commands
+alias g='lazygit'
+alias gs='git status'
+alias gc='git commit'
+alias ga='git add'
+alias gp='git push'
+
+# mqtt
+alias mqtt='aedes --host 0.0.0.0 --prt 1883 --verbose'
+
+# reload
+alias reload='source ~/.zshrc'

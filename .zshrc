@@ -12,9 +12,7 @@ autoload -Uz compinit
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion::complete:*' cache-path ~/.zsh/cache
 compinit -C
-
 zstyle ':completion:*' menu select
-
 
 # -------------------------------
 #  Common Environment Variables
@@ -36,7 +34,6 @@ source "$HOME/.local/share/zinit/zinit.git/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-
 # -------------------------------
 #  Lazy-loaded Plugins
 # -------------------------------
@@ -45,35 +42,20 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light Aloxaf/fzf-tab
 
-
 # -------------------------------
 #  OS Detection & Config
 # -------------------------------
 
-
+export WIN_DIR="/mnt/c/Users/phili"
 if [[ "$OSTYPE" == "darwin"* ]]; then
-   
     source "$HOME/.zsh_macos"
-
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-
-    export WIN_DIR="/mnt/c/Users/phili"
-    source "$WIN_DIR/.zsh_linux"
-
 fi
-
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    source "$WIN_DIR/.zsh_linux"
+fi
 
 # -------------------------------
 #  Starship Prompt
 # -------------------------------
 
 eval "$(starship init zsh)"
-
-# -------------------------------
-#  Source External Files
-# -------------------------------
-
-
-alias reload='source ~/.zshrc'
-
-
