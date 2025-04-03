@@ -58,3 +58,4 @@ alias ematex='pandoc $MA/Masterarbeit.md --template $MA/template.tex -o $MA/mast
 
 alias mqtt='aedes --host 0.0.0.0 --prt 1883 --verbose'
 
+alias ip='echo "Local IP: $(ipconfig getifaddr en0 || ipconfig getifaddr en1)"'
