@@ -1,6 +1,12 @@
  # Linux/WSL specific paths and configurations
 #echo "setting up linux specific aliases"
 
+#ssh setup
+
+#eval $(ssh-agent -s)
+#ssh-add /mnt/c/Users/phili/.ssh/id_ed25519
+
+
 # basic fs commands
 alias c='clear'
 alias ll='ls -alF'
