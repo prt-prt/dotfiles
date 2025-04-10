@@ -1,5 +1,5 @@
  # Linux/WSL specific paths and configurations
-echo "setting up linux specific aliases"
+#echo "setting up linux specific aliases"
 
 # basic fs commands
 alias c='clear'
