@@ -1,11 +1,7 @@
  # Linux/WSL specific paths and configurations
 #echo "setting up linux specific aliases"
 
-#ssh setup
-
-#eval $(ssh-agent -s)
-#ssh-add /mnt/c/Users/phili/.ssh/id_ed25519
-
+alias p='cd Documents/1_Projects'
 
 # basic fs commands
 alias c='clear'
