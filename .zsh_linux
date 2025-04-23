@@ -28,3 +28,7 @@ alias mqtt='aedes --host 0.0.0.0 --prt 1883 --verbose'
 
 # reload
 alias reload='source ~/.zshrc'
+
+#ip
+alias ip='echo "Local IP: $(hostname -I | awk "{print \$1}")"'
+
