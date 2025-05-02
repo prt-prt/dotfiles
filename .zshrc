@@ -52,7 +52,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     source "$HOME/.zsh_macos"
 fi
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    source "$WIN_DIR/.zsh_linux"
+    source "$HOME/.zsh_linux"
 fi
 
 # -------------------------------
